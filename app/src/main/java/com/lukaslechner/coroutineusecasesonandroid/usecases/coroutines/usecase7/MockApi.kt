@@ -12,8 +12,8 @@ fun mockApi() = createMockApi(
         .mock(
             "http://localhost/android-version-features/27",
             { Gson().toJson(mockVersionFeaturesOreo) },
-            200,
-            1050,
+            500,
+            2000,
             persist = false
         )
         // network error on second request
@@ -36,7 +36,7 @@ fun mockApi() = createMockApi(
             "http://localhost/android-version-features/28",
             { Gson().toJson(mockVersionFeaturesPie) },
             200,
-            1050,
+            2000,
             persist = false
         )
         // network error on second request
